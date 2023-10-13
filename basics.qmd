@@ -1,0 +1,676 @@
+---
+title: ""
+subtitle: ""
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+   # logo: uf_logo.png
+    css: styles.css
+    footer: "`R` | `Basics` &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"
+resources:
+  - demo.pdf
+---
+
+# `R `
+Basics
+
+
+## What is `R`?
+::: columns
+::: {.column width="100%"}
+<center>
+<img data-src="images/rlogo.png" width="400" />
+</center>
+"language and environment for statistical computing and graphics"
+:::
+:::
+
+## What is `R`?
+::: columns
+::: {.column width="100%"}
+
+
+- Computer language and statistical package
+- Dialect of `S` --> `S-PLUS` (commercial statistical computing language from Bell Labs in the 1980's)
+- Ross Ihaka and Robert Gentleman (from New Zealand) rewrote it from scratch, made it free and named it `R`
+:::
+:::
+
+## Why use `R`?
+::: columns
+::: {.column width="100%"}
+
+
+- Powerful tool (statistics, mathematics, graphing)
+- Free as in *free candy*
+- Free as in *free speech*
+- Replicability
+:::
+:::
+
+## Why some don't love `R`?
+::: columns
+::: {.column width="100%"}
+
+
+- Learning curve
+- No Graphical User Interface (GUI)
+- Technical aspects (slow and memory hungry)
+- Built by the community (no organization is behind it)
+:::
+:::
+
+## `R` through `RStudio`
+::: columns
+::: {.column width="100%"}
+![](images/rstudio.png){fig-align="center"}
+
+ `R` is the programming language and `RStudio` an integrated development environment (IDE)
+ 
+:::
+:::
+
+## `R` basics  {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+
+``` {r, echo = TRUE, include=TRUE}
+1+2
+```
+:::
+:::
+ 
+## `R` basics {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+
+``` {r, echo = TRUE, include=TRUE} 
+1+2
+1-2
+1*2
+1/2
+```
+:::
+:::
+
+## `R` basics {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+
+``` {r, echo = TRUE, include=TRUE} 
+1+2
+1-2
+1*2
+1/2
+1+2/2-2/2-2+2
+```
+:::
+:::
+
+## `R` basics {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+
+``` {r, echo = TRUE, include=TRUE} 
+1+2
+1-2
+1*2
+1/2
+1+2/2-2/2-2+2
+(1+2/2-2/2-2+2)*5
+```
+:::
+:::
+
+## `R` basics: variables {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+
+``` {r, echo = TRUE, include=TRUE} 
+a <- 2
+b <- 3
+```
+:::
+:::
+
+## `R` basics: variables {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+
+``` {r, echo = TRUE, include=TRUE} 
+a <- 2
+b <- 3
+a+b
+```
+:::
+:::
+
+## `R` basics: variables {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+
+``` {r, echo = TRUE, include=TRUE} 
+a <- 2
+b <- 3
+c <- a*2/(3-1)
+c
+a+b+c
+```
+:::
+:::
+
+## `R` basics: variables {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+
+``` {r, echo = TRUE, include=TRUE} 
+a <- 2
+b <- 3
+c <- a*2/(3-1)
+d <- a+b+c
+```
+:::
+:::
+
+## `R` basics: functions {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+- Functions: set of statements that perform a particular task
+- The absolute value: $|-5|=5$
+
+``` {r, echo = TRUE, include=TRUE} 
+abs(-5)
+```
+:::
+:::
+
+## `R` basics: functions {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+- Functions: set of statements that perform a particular task
+- Summation 
+
+``` {r, echo = TRUE, include=TRUE} 
+sum(1,2,3,4)
+```
+:::
+:::
+
+## `R` basics: functions {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+- Functions: set of statements that perform a particular task
+- `round`
+
+``` {r, echo = TRUE, include=TRUE} 
+round(3.1416)
+```
+:::
+:::
+
+## `R` basics: functions {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+- Functions: set of statements that perform a particular task
+- `round`
+
+``` {r, echo = TRUE, include=TRUE} 
+round(3.1416,digits=2)
+```
+:::
+:::
+
+## `R` basics: comments {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+- Properly documenting your code
+- Whatever is written after the `#` will not be read by `R`
+- Keep track of what you are doing and why
+
+``` {r, echo = TRUE, include=TRUE} 
+#This is a comment
+#I am rounding pi to two decimal points
+round(3.1416,digits=2)
+```
+:::
+:::
+
+## Data Structures: Vectors {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+- A collection of similar data types
+- The `c` stands for *combine*
+
+``` {r, echo = TRUE, include=TRUE} 
+#Vector of lizards' weight
+lizards_weight <- c(2.25, 4.45, 1.75)
+```
+:::
+:::
+
+## Data Structures: Vectors {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+- A collection of similar data types
+- The `c` stands for *combine*
+
+``` {r, echo = TRUE, include=TRUE} 
+#Vector of lizards' weight
+lizards_weight <- c(2.25, 4.45, 1.75)
+lizards_weight[2]
+```
+:::
+:::
+
+
+## Data Structures: Vectors {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+- A collection of similar data types
+- The `c` stands for *combine*
+
+``` {r, echo = TRUE, include=TRUE} 
+#Vector of lizards' weight
+lizards_weight <- c(2.25, 4.45, 1.75)
+lizards_weight[2]
+var1 <- lizards_weight[2]*100
+var1
+```
+:::
+:::
+
+## Data Structures: Vectors {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+- A collection of similar data types
+- The `c` stands for *combine*
+
+``` {r, echo = TRUE, include=TRUE} 
+#Vector of lizards' weight
+lizards_weight <- c(2.25, 4.45, 1.75)
+lizards_weight[2]
+var1 <- lizards_weight[2]*100
+var1
+sum(lizards_weight)
+```
+:::
+:::
+
+## Data Structures: Other {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+- Vectors
+- Matrices
+- Lists
+- Data Frames
+
+:::
+:::
+
+## Logic Operators {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+- Allow for comparisons among data types
+
+``` {r, echo = TRUE, include=TRUE} 
+#Vector of lizards' weight
+lizards_weight <- c(2.25, 4.45, 1.75)
+```
+:::
+:::
+
+## Logic Operators {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+- Allow for comparisons among data types
+
+``` {r, echo = TRUE, include=TRUE} 
+#Vector of lizards' weight
+lizards_weight <- c(2.25, 4.45, 1.75)
+lizards_weight > 2
+```
+:::
+:::
+
+## Logic Operators {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+- Allow for comparisons among data types
+
+``` {r, echo = TRUE, include=TRUE} 
+#Vector of lizards' weight
+lizards_weight <- c(2.25, 4.45, 1.75)
+lizards_weight > 2
+lizards_weight[lizards_weight > 2] #greater than
+```
+:::
+:::
+
+## Logic Operators {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+- Allow for comparisons among data types
+
+``` {r, echo = TRUE, include=TRUE} 
+#Vector of lizards' weight
+lizards_weight <- c(2.25, 4.45, 1.75)
+lizards_weight > 2
+lizards_weight[lizards_weight < 2] #less than
+```
+:::
+:::
+
+## Multiple logical operators
+::: columns
+::: {.column width="100%"}
+
+| Code | Math | Description                                                            
+|------|------|---------------|
+| `==` |  $=$ | Equal to      |
+| `!=` |  $\neq$ | Not equal to    |
+| `>`  |  $>$ | Greater than  |                   
+| `<`  |  $<$ | Less than   |
+| `>=`  |  $\geq$ | Greater or equal to   |  
+| `<=`  |  $\leq$ | Less or equal to   |  
+
+:::
+:::
+
+## and/or operators (`&`, `|`)
+::: columns
+::: {.column width="100%"}
+
+- In a regular 'querty' keyboard
+  - `&` is located in the 7 key
+  - `|` is located above the 'return' or 'enter' key
+
+<center>
+<img data-src="images/or.png" height="170" width="200" />
+</center>
+:::
+:::
+
+## and/or operators (`&`, `|`) {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+
+```{r,echo=TRUE, include=TRUE}
+#simulated vector of female dolphins data
+dolphins_f <- c(190,200,185,189,189,210,195,220)
+```
+
+:::
+:::
+
+## and/or operators (`&`, `|`) {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+- Which dolphins in this data set have a weight between 190 and 220 Kg?
+
+```{r,echo=TRUE, include=TRUE}
+#simulated vector of female dolphins data
+dolphins_f <- c(190,200,185,189,189,210,195,220)
+#average female weight is 190
+dolphins_f[dolphins_f > 190 & dolphins_f < 220]
+```
+
+:::
+:::
+
+## and/or operators (`&`, `|`) {auto-animate="true"}
+::: columns
+::: {.column width="100%"}
+
+- Which dolphins in this data set have a weight between 190 and 220 Kg?
+
+```{r,echo=TRUE, include=TRUE}
+#simulated vector of female dolphins data
+dolphins_f <- c(190,200,185,189,189,210,195,220)
+#average female weight is 190
+dolphins_f[dolphins_f > 190 & dolphins_f < 220]
+```
+
+:::
+:::
+
+## What are `R` packages
+::: columns
+::: {.column width="100%"}
+
+
+- Contain code (functions), data, and documentation
+- Standardized
+- Stored in the Comprehensive `R` Archive Network (CRAN)
+- There are $> 18,000$ packages in CRAN
+- Most packages have functions to make calculations
+- Some may have just data (e.g. `palmerpenguins`)
+
+:::
+::: 
+
+## Install `R` Packages
+::: columns
+::: {.column width="100%"}
+
+
+```{r,echo=TRUE, include=TRUE}
+#Install R packages
+#install.packages("palmerpenguins") #this installs the package
+library(palmerpenguins) #this loads the package into our workspace
+```
+
+:::
+::: 
+
+
+## Palmer Penguins
+::: columns
+::: {.column width="100%"}
+
+
+<center>
+<img data-src="images/penguins.png" height="500" width="600" />
+</center>
+
+:::
+
+::: 
+## Palmer Penguins
+::: columns
+::: {.column width="100%"}
+
+
+<center>
+<img data-src="images/penguins2.png" height="500" width="600" />
+</center>
+
+:::
+
+::: 
+
+## Spreadsheets
+::: columns
+::: {.column width="100%"}
+
+<center>
+<img data-src="images/gentoo.png" height="550" width="500" />
+</center>
+
+:::
+:::
+
+## Penguins Data Frame
+::: columns
+::: {.column width="120%"}
+- `head()` and `tail()` functions
+
+```{r,echo=TRUE, include=TRUE}
+#head shows the first six rows
+head(penguins)
+```
+
+:::
+::: 
+
+## Penguins Data Frame
+::: columns
+::: {.column width="120%"}
+- `head()` and `tail()` functions
+
+```{r,echo=TRUE, include=TRUE}
+#head shows the last six rows
+tail(penguins)
+```
+
+:::
+::: 
+
+## Penguins Data Frame
+::: columns
+::: {.column width="100%"}
+- `names()` function to see column names 
+
+```{r,echo=TRUE, include=TRUE}
+#head shows the last six rows
+names(penguins)
+```
+
+:::
+::: 
+
+## The `$` operator
+::: columns
+::: {.column width="100%"}
+- Use the `$` operator to access columns
+
+```{r,echo=TRUE, include=TRUE}
+#head shows the last six rows
+penguins$island
+penguins$body_mass_g
+```
+
+:::
+:::
+
+## Functions and Data Frames
+::: columns
+::: {.column width="100%"}
+- `mean()` bill length of all penguins
+
+```{r,echo=TRUE, include=TRUE}
+penguins$bill_length_mm
+mean(penguins$bill_length_mm)
+```
+
+:::
+::: 
+
+## Functions and Data Frames
+::: columns
+::: {.column width="100%"}
+- `mean()` bill length of all penguins
+
+```{r,echo=TRUE, include=TRUE}
+mean(penguins$bill_length_mm,na.rm=TRUE)
+```
+
+:::
+:::
+
+## Logic, Functions and Data Frames
+::: columns
+::: {.column width="100%"}
+- What is the mean body mass of gentoo males?
+
+```{r,echo=TRUE, include=TRUE}
+mean(penguins$body_mass_g[penguins$species=="Gentoo" 
+                          & penguins$sex=="male"],na.rm = TRUE)
+```
+
+:::
+:::
+
+## Exploratory visualizations
+::: columns
+::: {.column width="100%"}
+- Histogram allows you to explore:
+  - distribution of the data
+  - min and max
+  - variability
+
+:::
+:::
+
+## Exploratory visualizations
+::: columns
+::: {.column width="100%"}
+
+```{r,echo=TRUE, include=TRUE}
+hist(penguins$body_mass_g,main="",
+     xlab="Bodymass (g)")
+```
+:::
+:::
+
+## Exploratory visualizations
+::: columns
+::: {.column width="100%"}
+
+```{r,echo=TRUE, include=TRUE}
+#Scatter plot
+plot(penguins$bill_depth_mm,penguins$body_mass_g,
+     xlab="Bill Depth (mm)", ylab="Body Mass (g)")
+```
+:::
+:::
+
+## Exercise
+::: columns
+::: {.column width="100%"}
+
+- Make a scatter plot of bill depth and body mass, 
+-...but only for females of the species Gentoo.
+:::
+:::
+
+## Exercise
+::: columns
+::: {.column width="100%"}
+
+```{r,echo=TRUE, include=TRUE}
+#Scatter plot
+plot(penguins$bill_depth_mm[penguins$species=="Gentoo" 
+                            & penguins$sex=="female"],
+     penguins$body_mass_g[penguins$species=="Gentoo" 
+                            & penguins$sex=="female"],
+     xlab="Bill Depth (mm)", ylab="Body Mass (g)")
+```
+:::
+:::
