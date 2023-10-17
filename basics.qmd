@@ -15,7 +15,11 @@ resources:
 ---
 
 # `R `
-Basics
+
+
+Dr. Miguel Acevedo (University of Florida)
+
+Dr. Luis J. Villanueva-Rivera (Smithsonian)
 
 
 ## What is `R`?
@@ -341,19 +345,6 @@ lizards_weight <- c(2.25, 4.45, 1.75)
 :::
 :::
 
-## Logic Operators {auto-animate="true"}
-::: columns
-::: {.column width="100%"}
-
-- Allow for comparisons among data types
-
-``` {r, echo = TRUE, include=TRUE} 
-#Vector of lizards' weight
-lizards_weight <- c(2.25, 4.45, 1.75)
-lizards_weight > 2
-```
-:::
-:::
 
 ## Logic Operators {auto-animate="true"}
 ::: columns
@@ -364,26 +355,11 @@ lizards_weight > 2
 ``` {r, echo = TRUE, include=TRUE} 
 #Vector of lizards' weight
 lizards_weight <- c(2.25, 4.45, 1.75)
-lizards_weight > 2
 lizards_weight[lizards_weight > 2] #greater than
 ```
 :::
 :::
 
-## Logic Operators {auto-animate="true"}
-::: columns
-::: {.column width="100%"}
-
-- Allow for comparisons among data types
-
-``` {r, echo = TRUE, include=TRUE} 
-#Vector of lizards' weight
-lizards_weight <- c(2.25, 4.45, 1.75)
-lizards_weight > 2
-lizards_weight[lizards_weight < 2] #less than
-```
-:::
-:::
 
 ## Multiple logical operators
 ::: columns
@@ -552,27 +528,12 @@ tail(penguins)
 :::
 ::: 
 
-## Penguins Data Frame
-::: columns
-::: {.column width="100%"}
-- `names()` function to see column names 
-
-```{r,echo=TRUE, include=TRUE}
-#head shows the last six rows
-names(penguins)
-```
-
-:::
-::: 
-
 ## The `$` operator
 ::: columns
 ::: {.column width="100%"}
 - Use the `$` operator to access columns
 
 ```{r,echo=TRUE, include=TRUE}
-#head shows the last six rows
-penguins$island
 penguins$body_mass_g
 ```
 
@@ -582,11 +543,11 @@ penguins$body_mass_g
 ## Functions and Data Frames
 ::: columns
 ::: {.column width="100%"}
-- `mean()` bill length of all penguins
+- `mean()` body mass
 
 ```{r,echo=TRUE, include=TRUE}
-penguins$bill_length_mm
-mean(penguins$bill_length_mm)
+penguins$body_mass_g
+mean(penguins$body_mass_g)
 ```
 
 :::
@@ -595,10 +556,10 @@ mean(penguins$bill_length_mm)
 ## Functions and Data Frames
 ::: columns
 ::: {.column width="100%"}
-- `mean()` bill length of all penguins
+- `mean()` body mass
 
 ```{r,echo=TRUE, include=TRUE}
-mean(penguins$bill_length_mm,na.rm=TRUE)
+mean(penguins$body_mass_g,na.rm=TRUE)
 ```
 
 :::
@@ -655,8 +616,9 @@ plot(penguins$bill_depth_mm,penguins$body_mass_g,
 ::: columns
 ::: {.column width="100%"}
 
-- Make a scatter plot of bill depth and body mass, 
--...but only for females of the species Gentoo.
+- Make a scatter plot of bill depth ($x$-axis) vs. body mass ($y$-axis), 
+...but only for females of the species Gentoo.
+- Remember to label the axes correctly including measuring units
 :::
 :::
 
